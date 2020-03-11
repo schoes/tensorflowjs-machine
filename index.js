@@ -14,6 +14,6 @@ const label = tf.tensor([[200, 230, 240, 345]]);
 
 const predictionPoint = tf.tensor([123,35]);
 
-const distances = featurees.sub(predictionPoint).pow(2).sum(1).pow(.5).expandDims(1);
-
-distances.concat(label,1).print()
+const distances = featurees.sub(predictionPoint).pow(2).sum(1).pow(.5);
+distances.print();
+//distances.concat(label).print()
